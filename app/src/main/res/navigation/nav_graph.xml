@@ -3,33 +3,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/userInfoFragment">
+    app:startDestination="@id/loginFragment">
 
     <fragment
-        android:id="@+id/frontCardFragment"
-        android:name="com.menesdurak.creditcard.FrontCardFragment"
-        android:label="fragment_front_card"
-        tools:layout="@layout/fragment_front_card" >
-        <action
-            android:id="@+id/action_frontCardFragment_to_backCardFragment"
-            app:destination="@id/backCardFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/backCardFragment"
-        android:name="com.menesdurak.creditcard.BackCardFragment"
-        android:label="fragment_back_card"
-        tools:layout="@layout/fragment_back_card" >
-        <action
-            android:id="@+id/action_backCardFragment_to_frontCardFragment"
-            app:destination="@id/frontCardFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/userInfoFragment"
-        android:name="com.menesdurak.creditcard.UserInfoFragment"
+        android:id="@+id/loginFragment"
+        android:name="com.menesdurak.creditcard.LoginFragment"
         android:label="fragment_user_info"
-        tools:layout="@layout/fragment_user_info" >
+        tools:layout="@layout/fragment_login" >
         <action
-            android:id="@+id/action_userInfoFragment_to_frontCardFragment"
-            app:destination="@id/frontCardFragment" />
+            android:id="@+id/action_loginFragment_to_mainFrameFragment"
+            app:destination="@id/mainFrameFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/mainFrameFragment"
+        android:name="com.menesdurak.creditcard.MainFrameFragment"
+        android:label="fragment_main_frame"
+        tools:layout="@layout/fragment_main_frame" />
+
 </navigation>
