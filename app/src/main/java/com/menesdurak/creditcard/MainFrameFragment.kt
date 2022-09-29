@@ -28,8 +28,8 @@ class MainFrameFragment : Fragment() {
 
         val fragmentTop = FrontCardFragment()
         val fragmentBottom = UserInfoFragment()
-        childFragmentManager.beginTransaction().add(binding.flCard.id, fragmentTop).commit()
-        childFragmentManager.beginTransaction().add(binding.flUserInfo.id, fragmentBottom).commit()
+        parentFragmentManager.beginTransaction().add(binding.flCard.id, fragmentTop).commit()
+        parentFragmentManager.beginTransaction().add(binding.flUserInfo.id, fragmentBottom).commit()
         val view = binding.root
         return view
     }

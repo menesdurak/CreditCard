@@ -18,7 +18,7 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <TextView
-            android:id="@+id/itvCardNumber"
+            android:id="@+id/itvEmpty"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="35dp"
@@ -32,28 +32,14 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/itvCardOwnerName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:text="Name Surname"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/itvCardNumber" />
-
-        <TextView
             android:id="@+id/itvCardLastDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="30dp"
-            android:text="06/25"
+            android:text="CVC"
             android:textSize="15sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@id/itvCardOwnerName"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/itvCardNumber" />
+            app:layout_constraintEnd_toEndOf="@id/itvEmpty"
+            app:layout_constraintTop_toBottomOf="@id/itvEmpty" />
 
         <Button
             android:id="@+id/btnToBack"

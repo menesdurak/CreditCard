@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.replace
 import androidx.navigation.findNavController
 import com.menesdurak.creditcard.databinding.FragmentBackCardBinding
 
@@ -27,8 +28,12 @@ class BackCardFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.btnToBack.setOnClickListener {
-            val frontFragment = FrontCardFragment()
-            childFragmentManager.beginTransaction().replace(R.id.frmBack, frontFragment).commit()
+            parentFragmentManager.beginTransaction().setCustomAnimations(
+                R.animator.card_flip_right_in, R.animator.card_flip_right_out,
+                R.animator.card_flip_left_in, R.animator.card_flip_left_out)
+                .replace<FrontCardFragment>(R.id.flCard)
+                .addToBackStack(null)
+                .commit()
         }
     }
 
