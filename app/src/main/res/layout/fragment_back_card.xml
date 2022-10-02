@@ -32,7 +32,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/itvCardLastDate"
+            android:id="@+id/itvCVC"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="CVC"
@@ -40,6 +40,17 @@
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="@id/itvEmpty"
             app:layout_constraintTop_toBottomOf="@id/itvEmpty" />
+
+        <TextView
+            android:id="@+id/itvCVCNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="       "
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:background="@color/teal_200"
+            app:layout_constraintEnd_toEndOf="@id/itvCVC"
+            app:layout_constraintTop_toBottomOf="@id/itvCVC" />
 
         <Button
             android:id="@+id/btnToBack"
